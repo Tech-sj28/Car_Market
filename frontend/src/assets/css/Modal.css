@@ -1,0 +1,121 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  
+  .modal-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .car-info-modal {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .payment-summary {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+  }
+  
+  .payment-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .payment-row.total {
+    border-bottom: none;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .info-box {
+    background: #e0e7ff;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem 0;
+  }
+  
+  .info-box ul {
+    margin: 0.5rem 0 0 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .negotiated-badge {
+    display: inline-block;
+    background: #f59e0b;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+  }
+  
+  .purchase-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .book-now-btn, .negotiate-btn {
+    flex: 1;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .book-now-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+  }
+  
+  .negotiate-btn {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+  }
+  
+  .test-drive-required {
+    text-align: center;
+    padding: 0.5rem;
+    background: #fef3c7;
+    color: #92400e;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }

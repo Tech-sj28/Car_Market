@@ -1,0 +1,507 @@
+/* pages/AdminNegotiations.css */
+.admin-negotiations {
+   
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 2rem;
+}
+
+.container {
+    
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-negotiations h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.admin-negotiations > .container > p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+/* Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+}
+
+.stat-info h3 {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-tab {
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.filter-tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.filter-tab.active {
+  background: white;
+  color: #1e293b;
+}
+
+/* Negotiations List */
+.negotiations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.negotiation-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.negotiation-card:hover {
+  transform: translateY(-3px);
+}
+
+.card-header {
+  padding: 1.2rem 1.5rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Status Badges */
+.badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.admin-approved {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.badge.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge.approved {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* Card Body */
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.offered {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+.difference {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #10b981;
+}
+
+/* Price Difference Highlight */
+.price-difference {
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.saving-amount {
+  color: #10b981;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Card Actions */
+.card-actions {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  gap: 1rem;
+  background: #f9fafb;
+}
+
+.approve-btn, .reject-btn {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.85rem;
+}
+
+.approve-btn {
+  background: #10b981;
+  color: white;
+}
+
+.approve-btn:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.reject-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.reject-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  padding: 1.5rem;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-content textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.modal-actions button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modal-actions button:first-child {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.modal-actions button:first-child:hover {
+  background: #e5e7eb;
+}
+
+.modal-actions button.approve {
+  background: #10b981;
+  color: white;
+}
+
+.modal-actions button.approve:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.modal-actions button.reject {
+  background: #ef4444;
+  color: white;
+}
+
+.modal-actions button.reject:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.loading::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.no-negotiations {
+  text-align: center;
+  padding: 4rem;
+  background: white;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.no-negotiations-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-negotiations h3 {
+  font-size: 1.3rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.no-negotiations p {
+  color: #6b7280;
+}
+
+/* Success/Error Messages */
+.success-message {
+  background: #10b981;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+.error-message {
+  background: #ef4444;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-negotiations {
+    padding: 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .stat-icon {
+    font-size: 1.8rem;
+  }
+  
+  .stat-number {
+    font-size: 1.2rem;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .card-body p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .filter-tabs {
+    gap: 0.3rem;
+  }
+  
+  .filter-tab {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+  
+  .modal-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-negotiations h1 {
+    font-size: 1.5rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1rem;
+  }
+}
